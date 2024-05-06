@@ -1,4 +1,4 @@
-package Aufgaben.Entwurfsmuster.observer;
+package Aufgaben.Entwurfsmuster.observer.weatherstation;
 
 public class DataModel {
     private double temp;

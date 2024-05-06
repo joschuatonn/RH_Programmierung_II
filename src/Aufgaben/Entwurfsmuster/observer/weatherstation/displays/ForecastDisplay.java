@@ -1,9 +1,12 @@
-package Aufgaben.Entwurfsmuster.observer;
+package Aufgaben.Entwurfsmuster.observer.weatherstation.displays;
+
+import Aufgaben.Entwurfsmuster.observer.weatherstation.Observer;
+import Aufgaben.Entwurfsmuster.observer.weatherstation.WeatherData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ForecastDisplay implements Observer{
+public class ForecastDisplay implements Observer {
 
     private WeatherData weatherData;
     private List<Double> pressureHistory;

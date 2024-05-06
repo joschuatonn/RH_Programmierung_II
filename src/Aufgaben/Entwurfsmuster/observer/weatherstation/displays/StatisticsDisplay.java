@@ -1,9 +1,13 @@
-package Aufgaben.Entwurfsmuster.observer;
+package Aufgaben.Entwurfsmuster.observer.weatherstation.displays;
+
+import Aufgaben.Entwurfsmuster.observer.weatherstation.DataModel;
+import Aufgaben.Entwurfsmuster.observer.weatherstation.Observer;
+import Aufgaben.Entwurfsmuster.observer.weatherstation.WeatherData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StatisticsDisplay implements Observer{
+public class StatisticsDisplay implements Observer {
     private List<DataModel> dataList;
     private WeatherData weatherData;
 

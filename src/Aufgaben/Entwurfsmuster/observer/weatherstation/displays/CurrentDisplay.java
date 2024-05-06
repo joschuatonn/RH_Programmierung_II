@@ -1,4 +1,7 @@
-package Aufgaben.Entwurfsmuster.observer;
+package Aufgaben.Entwurfsmuster.observer.weatherstation.displays;
+
+import Aufgaben.Entwurfsmuster.observer.weatherstation.Observer;
+import Aufgaben.Entwurfsmuster.observer.weatherstation.WeatherData;
 
 public class CurrentDisplay implements Observer {
     private WeatherData weatherData;

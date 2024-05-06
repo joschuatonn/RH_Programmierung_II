@@ -1,4 +1,4 @@
-package Aufgaben.Entwurfsmuster.observer;
+package Aufgaben.Entwurfsmuster.observer.weatherstation;
 import java.util.List;
 import java.util.ArrayList;
 
