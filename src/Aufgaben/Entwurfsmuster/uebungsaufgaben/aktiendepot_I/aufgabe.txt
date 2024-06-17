@@ -1,0 +1,2 @@
+Eine Bank will ihre Kunden mit Aktiendepot unmittelbar über
+Kursänderungen der Papiere in ihrem jeweiligen Portfolio informieren.

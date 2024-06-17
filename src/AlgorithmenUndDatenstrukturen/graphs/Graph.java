@@ -84,7 +84,6 @@ public class Graph {
     }
 
     public void bfs(int start) {
-        //ArrayList<Integer> q = new ArrayList<>();
         Queue<Integer> q = new ConcurrentLinkedQueue<>();
         boolean[] visited = new boolean[edges.length];
         int current;
@@ -92,7 +91,6 @@ public class Graph {
         q.add(start);
 
         while(!q.isEmpty()) {
-            //current = q.remove(0);
             current = q.remove();
             visited[current-1] = true;
             System.out.println("Besuche Knoten " + current);
@@ -102,8 +100,38 @@ public class Graph {
                 }
             }
         }
-
         System.out.println("Die Breitensuche ist abgeschlossen");
+    }
+
+    public void bfsWithColors(int start) {
+        Queue<Integer> q = new ConcurrentLinkedQueue<>();
+        int[] colors = new int[edges.length];
+        int current;
+
+        q.add(start);
+        colors[start-1] = 1;
+
+        while(!q.isEmpty()) {
+            current = q.remove();
+            System.out.println("Besuche Knoten " + current);
+            for(int neighbour : getNeighbours(current)) {
+                if(colors[neighbour-1] == 0) {
+                    colors[neighbour-1] = 1;
+                    q.add(neighbour);
+                }
+            }
+
+            colors[current - 1] = 2;
+            printColorsArray(colors);
+        }
+        System.out.println("Die Breitensuche ist abgeschlossen");
+    }
+
+    public void printColorsArray(int[] a) {
+        String[] colors = {"weiß", "grau", "Schwarz"};
+        for(int i=1; i<=a.length; i++) {
+            System.out.println(i+": " + colors[a[i-1]]);
+        }
     }
 
     public void printAdjacencyMatrix() {

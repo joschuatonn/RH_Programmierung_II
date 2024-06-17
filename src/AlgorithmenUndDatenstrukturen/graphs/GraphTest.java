@@ -14,6 +14,7 @@ public class GraphTest {
         g.printAdjacencyMatrix();
         System.out.println(g.getNeighbours(2));
 
-        g.bfs(3);
+        //g.bfs(3);
+        g.bfsWithColors(3);
     }
 }

@@ -1,0 +1,7 @@
+package Aufgaben.Entwurfsmuster.uebungsaufgaben.aktiendepot_I;
+
+public interface Subject {
+    void registerObserver(Observer observer);
+    void removeObserver(Observer observer);
+    void notifyObservers();
+}
